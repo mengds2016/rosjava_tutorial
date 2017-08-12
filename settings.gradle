@@ -14,3 +14,5 @@
  * the License.
  */
 
+include 'rosjava_tutorial_java_msgs'
+include 'rosjava_tutorial_java_core'
