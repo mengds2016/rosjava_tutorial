@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.github.rosjava.rosjava_tutorial.rosjava_tutorial_java_core;
+package com.github.rosjava_tutorial.rosjava_tutorial_java_core;
 
 import org.ros.concurrent.CancellableLoop;
 import org.ros.namespace.GraphName;
