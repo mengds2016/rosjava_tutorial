@@ -3,7 +3,7 @@ project(rosjava_tutorial_java_msgs)
 
 find_package(catkin REQUIRED rosjava_build_tools genjava rosjava_tutorial_msgs)
 
-catkin_rosjava_setup(installApp publish)
+catkin_rosjava_setup()
 
 generate_rosjava_messages(
   PACKAGES
