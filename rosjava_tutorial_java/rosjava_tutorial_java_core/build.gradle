@@ -38,5 +38,6 @@ dependencies {
   compile 'org.ros.rosjava_core:rosjava:[0.3,0.4)'
   /* Example of a local subproject dependency */
   /* compile project(':sibling_gradle_project') */
+  compile 'org.ros.rosjava_messages:rosjava_tutorial_msgs:0.0.0'
 }
 

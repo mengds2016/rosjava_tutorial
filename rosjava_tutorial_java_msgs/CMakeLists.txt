@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rosjava_tutorial_java_msgs)
 
-find_package(catkin REQUIRED rosjava_build_tools genjava)
+find_package(catkin REQUIRED rosjava_build_tools genjava rosjava_tutorial_msgs)
 
 catkin_rosjava_setup(installApp publish)
 
