@@ -17,12 +17,20 @@
 package com.github.rosjava_tutorial_java.rosjava_tutorial_java_core;
 
 import org.apache.commons.logging.Log;
+import org.ros.exception.ServiceException;
+import org.ros.message.MessageFactory;
 import org.ros.message.MessageListener;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
 import org.ros.node.NodeMain;
+import org.ros.node.service.ServiceResponseBuilder;
 import org.ros.node.topic.Subscriber;
+
+import rosjava_tutorial_msgs.MyMessage;
+import rosjava_tutorial_msgs.MyService;
+import rosjava_tutorial_msgs.MyServiceRequest;
+import rosjava_tutorial_msgs.MyServiceResponse;
 
 /**
  * A simple {@link Subscriber} {@link NodeMain}.
@@ -44,5 +52,27 @@ public class Listener extends AbstractNodeMain {
         log.info("I heard: \"" + message.getData() + "\"");
       }
     });
+    
+    // add custom topic listener
+    Subscriber<MyMessage> subscriber2 = connectedNode.newSubscriber("my_message", MyMessage._TYPE);
+    subscriber2.addMessageListener(new MessageListener<MyMessage>() {
+		@Override
+		public void onNewMessage(MyMessage message) {
+			log.info("custom message: " + message.getHeader().getSeq());
+		}
+	});
+    
+    // add custom service
+	final MessageFactory messageFactory = connectedNode.getTopicMessageFactory();
+    connectedNode.newServiceServer("my_service", MyService._TYPE, new ServiceResponseBuilder<MyServiceRequest, MyServiceResponse>() {
+		@Override
+		public void build(MyServiceRequest request, MyServiceResponse response) throws ServiceException {
+			log.info("service call: " + request.getMessages().get(0).getHeader().getSeq());
+			MyMessage message = messageFactory.newFromType(MyMessage._TYPE);
+			message.getHeader().setSeq(request.getMessages().get(0).getHeader().getSeq() + 1);
+			response.getMessages().add(message);
+		}
+
+	});
   }
 }
