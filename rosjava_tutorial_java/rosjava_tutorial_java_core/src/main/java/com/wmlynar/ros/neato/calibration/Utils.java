@@ -7,13 +7,14 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.HashSet;
+import java.util.Locale;
 
 import javax.management.RuntimeErrorException;
 
 import com.google.common.io.Files;
 
 public class Utils {
-	
+
 	private static HashSet<String> writed = new HashSet<>();
 
 	public static float averageInBounds(float[] array, float minValue, float maxValue, float otherwise) {
@@ -51,7 +52,7 @@ public class Utils {
 			
 		    FileWriter writer = new FileWriter(filename,true); //the true will append the new data
 			for (int i = 0; i < values.length; i++) {
-				String ss = String.format("%f",values[i]);
+				String ss = String.format(Locale.US,"%f",values[i]);
 				writer.append(ss);
 				if(i!=values.length-1) {
 					writer.append(',');
