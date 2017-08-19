@@ -39,5 +39,7 @@ dependencies {
   /* Example of a local subproject dependency */
   /* compile project(':sibling_gradle_project') */
   compile 'org.ros.rosjava_messages:rosjava_tutorial_msgs:0.0.0'
+  compile 'org.ros.rosjava_messages:sensor_msgs:[1.12,1.13)'
+  compile 'jfree:jfreechart:1.0.12'
 }
 
