@@ -45,7 +45,9 @@ public class Utils {
 		try
 		{
 			if(!writed.contains(filename)) {
-				new File(filename).delete();
+				File file = new File(filename);
+				file.mkdirs();
+				file.delete();
 				writed.add(filename);
 			}
 			

@@ -152,7 +152,7 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 		//distance -= bias1;
 		if(!paused) {
 			plotter.addValues("odom",timestamp,distance);
-			Utils.logCsv("odom",timestamp,distance);
+			Utils.logCsv("target/odom",timestamp,distance);
 		}
 	}
 	
@@ -170,7 +170,7 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 		value-=bias2;
 		if(!paused) {
 			plotter.addValues("scan",timestamp,value);
-			Utils.logCsv("scan",timestamp,value);
+			Utils.logCsv("target/scan",timestamp,value);
 		}
 	}
 
