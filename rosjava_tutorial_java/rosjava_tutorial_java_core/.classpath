@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry path="src/main/java" kind="src"/>
-	<classpathentry path="bin" kind="output"/>
-	<classpathentry path="src/test/java" kind="src"/>
-	<classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7/" kind="con"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/rosjava/0.3.5/rosjava-0.3.5.jar" kind="lib"/>
-	<classpathentry path="/home/woj/tmp/rosjava_ws/devel/share/maven/org/ros/rosjava_messages/rosjava_tutorial_msgs/0.0.0/rosjava_tutorial_msgs-0.0.0.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/sensor_msgs/1.12.5/sensor_msgs-1.12.5.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.gradle/caches/modules-2/files-2.1/jfree/jfreechart/1.0.12/47e8a2e9e052d292e416a6fd5292a77b54c48fac/jfreechart-1.0.12.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/apache_xmlrpc_common/0.3.5/apache_xmlrpc_common-0.3.5.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/apache_xmlrpc_server/0.3.5/apache_xmlrpc_server-0.3.5.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/apache_xmlrpc_client/0.3.5/apache_xmlrpc_client-0.3.5.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_bootstrap/message_generation/0.3.0/message_generation-0.3.0.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/rosjava_test_msgs/0.3.0/rosjava_test_msgs-0.3.0.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/rosgraph_msgs/1.11.2/rosgraph_msgs-1.11.2.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/geometry_msgs/1.12.5/geometry_msgs-1.12.5.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/nav_msgs/1.12.5/nav_msgs-1.12.5.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/tf2_msgs/0.5.15/tf2_msgs-0.5.15.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/dnsjava/dnsjava/2.1.1/dnsjava-2.1.1.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1/7657caf2c78e1d79c74d36f2ae128a115f7cc180/com.springsource.org.apache.commons.logging-1.1.1.jar" kind="lib" sourcepath="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1/f3f156cbff0e0fb0d64bfce31a352cce4a33bc19/com.springsource.org.apache.commons.logging-1.1.1-sources.jar"/>
-	<classpathentry path="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.net/2.0.0/3e78766072ff5a5cf3f5431d973c430c94ec612/com.springsource.org.apache.commons.net-2.0.0.jar" kind="lib" sourcepath="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.net/2.0.0/2bbe189642455d535fd10c353fd8fc960d09ec37/com.springsource.org.apache.commons.net-2.0.0-sources.jar"/>
-	<classpathentry path="/home/woj/.m2/repository/com/google/guava/guava/12.0/guava-12.0.jar" kind="lib"/>
-	<classpathentry path="/home/woj/tmp/rosjava_ws/devel/share/maven/org/ros/rosjava_messages/std_msgs/0.5.11/std_msgs-0.5.11.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.gradle/caches/modules-2/files-2.1/jfree/jcommon/1.0.15/6495e4f3777a24fd34c1544a8606243a600365c3/jcommon-1.0.15.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0/c493a925a091ac3d8f449d9265fe12482dabb2a7/com.springsource.org.apache.commons.httpclient-3.1.0.jar" kind="lib" sourcepath="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0/d24377eaaa97bb0d402c44e45300eced3484187c/com.springsource.org.apache.commons.httpclient-3.1.0-sources.jar"/>
-	<classpathentry path="/home/woj/.m2/repository/org/apache/ws/commons/ws-commons-util/1.0.1/ws-commons-util-1.0.1.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/io/netty/netty/3.5.2.Final/netty-3.5.2.Final.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/org/apache/commons/com.springsource.org.apache.commons.codec/1.3.0/com.springsource.org.apache.commons.codec-1.3.0.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/org/apache/commons/com.springsource.org.apache.commons.io/1.4.0/com.springsource.org.apache.commons.io-1.4.0.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/org/apache/commons/com.springsource.org.apache.commons.lang/2.4.0/com.springsource.org.apache.commons.lang-2.4.0.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_bootstrap/gradle_plugins/0.3.0/gradle_plugins-0.3.0.jar" kind="lib"/>
-	<classpathentry path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/actionlib_msgs/1.12.5/actionlib_msgs-1.12.5.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar" kind="lib"/>
-	<classpathentry path="/home/woj/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" kind="lib"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7/"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/rosjava/0.3.5/rosjava-0.3.5.jar"/>
+	<classpathentry kind="lib" path="/home/woj/tmp/rosjava_ws/devel/share/maven/org/ros/rosjava_messages/rosjava_tutorial_msgs/0.0.0/rosjava_tutorial_msgs-0.0.0.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/sensor_msgs/1.12.5/sensor_msgs-1.12.5.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.gradle/caches/modules-2/files-2.1/jfree/jfreechart/1.0.12/47e8a2e9e052d292e416a6fd5292a77b54c48fac/jfreechart-1.0.12.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/apache_xmlrpc_common/0.3.5/apache_xmlrpc_common-0.3.5.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/apache_xmlrpc_server/0.3.5/apache_xmlrpc_server-0.3.5.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_core/apache_xmlrpc_client/0.3.5/apache_xmlrpc_client-0.3.5.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_bootstrap/message_generation/0.3.0/message_generation-0.3.0.jar" sourcepath="/home/woj/rosjava/src"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/rosjava_test_msgs/0.3.0/rosjava_test_msgs-0.3.0.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/rosgraph_msgs/1.11.2/rosgraph_msgs-1.11.2.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/geometry_msgs/1.12.5/geometry_msgs-1.12.5.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/nav_msgs/1.12.5/nav_msgs-1.12.5.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/tf2_msgs/0.5.15/tf2_msgs-0.5.15.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/dnsjava/dnsjava/2.1.1/dnsjava-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1/7657caf2c78e1d79c74d36f2ae128a115f7cc180/com.springsource.org.apache.commons.logging-1.1.1.jar" sourcepath="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1/f3f156cbff0e0fb0d64bfce31a352cce4a33bc19/com.springsource.org.apache.commons.logging-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.net/2.0.0/3e78766072ff5a5cf3f5431d973c430c94ec612/com.springsource.org.apache.commons.net-2.0.0.jar" sourcepath="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.net/2.0.0/2bbe189642455d535fd10c353fd8fc960d09ec37/com.springsource.org.apache.commons.net-2.0.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/com/google/guava/guava/12.0/guava-12.0.jar"/>
+	<classpathentry kind="lib" path="/home/woj/tmp/rosjava_ws/devel/share/maven/org/ros/rosjava_messages/std_msgs/0.5.11/std_msgs-0.5.11.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.gradle/caches/modules-2/files-2.1/jfree/jcommon/1.0.15/6495e4f3777a24fd34c1544a8606243a600365c3/jcommon-1.0.15.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0/c493a925a091ac3d8f449d9265fe12482dabb2a7/com.springsource.org.apache.commons.httpclient-3.1.0.jar" sourcepath="/home/woj/.gradle/caches/modules-2/files-2.1/org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0/d24377eaaa97bb0d402c44e45300eced3484187c/com.springsource.org.apache.commons.httpclient-3.1.0-sources.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/org/apache/ws/commons/ws-commons-util/1.0.1/ws-commons-util-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/io/netty/netty/3.5.2.Final/netty-3.5.2.Final.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/org/apache/commons/com.springsource.org.apache.commons.codec/1.3.0/com.springsource.org.apache.commons.codec-1.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/org/apache/commons/com.springsource.org.apache.commons.io/1.4.0/com.springsource.org.apache.commons.io-1.4.0.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/org/apache/commons/com.springsource.org.apache.commons.lang/2.4.0/com.springsource.org.apache.commons.lang-2.4.0.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_bootstrap/gradle_plugins/0.3.0/gradle_plugins-0.3.0.jar"/>
+	<classpathentry kind="lib" path="/opt/ros/kinetic/share/maven/org/ros/rosjava_messages/actionlib_msgs/1.12.5/actionlib_msgs-1.12.5.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
+	<classpathentry kind="lib" path="/home/woj/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>

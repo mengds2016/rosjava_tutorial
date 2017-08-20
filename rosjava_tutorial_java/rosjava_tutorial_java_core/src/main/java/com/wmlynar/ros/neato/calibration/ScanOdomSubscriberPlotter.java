@@ -16,7 +16,8 @@
 
 package com.wmlynar.ros.neato.calibration;
 
-import java.nio.channels.GatheringByteChannel;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import org.jfree.ui.RefineryUtilities;
 import org.ros.message.MessageListener;
@@ -50,8 +51,7 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 	private double prevY;
 	private boolean isPrevSet = false;
 	
-	private Summator sumOdom = new Summator();
-	private Summator sumScan = new Summator();
+	private boolean paused = false;
 
 	@Override
 	public GraphName getDefaultNodeName() {
@@ -60,6 +60,29 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 
 	@Override
 	public void onStart(ConnectedNode connectedNode) {
+		
+		plotter = new XyTimePlotter("Scan and Odom");
+		RefineryUtilities.centerFrameOnScreen(plotter);
+		plotter.setVisible(true);
+		
+		plotter.setMaximumXRange(10);
+		
+		plotter.addKeyListener(new KeyListener() {
+			
+			@Override
+			public void keyTyped(KeyEvent e) {
+				pauseUnpause();
+			}
+			
+			@Override
+			public void keyReleased(KeyEvent e) {
+			}
+			
+			@Override
+			public void keyPressed(KeyEvent e) {
+			}
+		});
+		
 		odomSubscriber = connectedNode.newSubscriber("odom", nav_msgs.Odometry._TYPE);
 		odomSubscriber.addMessageListener(new MessageListener<nav_msgs.Odometry>() {
 			@Override
@@ -84,12 +107,17 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 				}
 			}
 		});
-		
-		plotter = new XyTimePlotter("Scan and Odom");
-		RefineryUtilities.centerFrameOnScreen(plotter);
-		plotter.setVisible(true);
-		
-		plotter.setMaximumXRange(10);
+	}
+	
+	public void pauseUnpause() {
+		if(!paused) {
+			paused = true;
+		} else {
+			// reset bias
+			isBias1Set = false;
+			isBias2Set = false;
+			paused = false;
+		}
 	}
 	
 	private void onOdomMessage(Odometry message) {
@@ -117,11 +145,15 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 		prevY = valueY;
 		
 		if(!isBias1Set) {
-			bias1 = distance;
+			//bias1 = distance;
+			distance = 0;
 			isBias1Set = true;
 		}
-		plotter.addValues("odom",timestamp,distance);
-		Utils.logCsv("odom",timestamp,value);
+		//distance -= bias1;
+		if(!paused) {
+			plotter.addValues("odom",timestamp,distance);
+			Utils.logCsv("odom",timestamp,distance);
+		}
 	}
 	
 	private void onScanMessage(LaserScan message) {
@@ -135,9 +167,11 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 			bias2 = value;
 			isBias2Set = true;
 		}
-		value-=bias2-bias1;
-		plotter.addValues("scan",timestamp,value);
-		Utils.logCsv("scan",timestamp,value);
+		value-=bias2;
+		if(!paused) {
+			plotter.addValues("scan",timestamp,value);
+			Utils.logCsv("scan",timestamp,value);
+		}
 	}
 
 }
