@@ -50,7 +50,7 @@ public class ScanOdomPublisher extends AbstractNodeMain {
 		odomPublisher = connectedNode.newPublisher("odom", nav_msgs.Odometry._TYPE);
 		odom = odomPublisher.newMessage();
 		
-		scanPublisher = connectedNode.newPublisher("scan", sensor_msgs.LaserScan._TYPE);
+		scanPublisher = connectedNode.newPublisher("base_scan", sensor_msgs.LaserScan._TYPE);
 		scan = scanPublisher.newMessage();
 		scan.setAngleMin(0);
 		scan.setAngleMax((float) (359*Math.PI/180.));
@@ -77,6 +77,7 @@ public class ScanOdomPublisher extends AbstractNodeMain {
 		
 		odom.getHeader().setStamp(time);
 		odom.getPose().getPose().getPosition().setX(xOdom);
+		odom.getPose().getPose().getPosition().setY(xOdom);
 		odomPublisher.publish(odom);
 
 		scan.getHeader().setStamp(time);

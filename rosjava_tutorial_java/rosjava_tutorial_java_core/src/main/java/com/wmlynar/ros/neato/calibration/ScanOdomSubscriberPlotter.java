@@ -96,7 +96,7 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 
 		});
 
-		scanSubscriber = connectedNode.newSubscriber("scan", sensor_msgs.LaserScan._TYPE);
+		scanSubscriber = connectedNode.newSubscriber("base_scan", sensor_msgs.LaserScan._TYPE);
 		scanSubscriber.addMessageListener(new MessageListener<sensor_msgs.LaserScan>() {
 			@Override
 			public void onNewMessage(sensor_msgs.LaserScan message) {
@@ -136,23 +136,21 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 
 		double dx = valueX-prevX;
 		double dy = valueY-prevY;
-		
-		double value = Math.sqrt(dx*dx+dy*dy);
-
-		distance += value;
-		
 		prevX = valueX;
 		prevY = valueY;
 		
+		distance += Math.sqrt(dx*dx+dy*dy);
+		double value = valueX;
+		
 		if(!isBias1Set) {
-			//bias1 = distance;
+			bias1 = value;
 			distance = 0;
 			isBias1Set = true;
 		}
-		//distance -= bias1;
+		value -= bias1;
 		if(!paused) {
-			plotter.addValues("odom",timestamp,distance);
-			Utils.logCsv("target/odom",timestamp,distance);
+			plotter.addValues("odom",timestamp,value);
+			Utils.logCsv("target/odom",timestamp,value);
 		}
 	}
 	
@@ -160,8 +158,8 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 		double timestamp = message.getHeader().getStamp().toSeconds();
 		
 		float[] ranges = message.getRanges();
-		float minRange = message.getRangeMin();//-10000000000000.f;
-		float maxRange = message.getRangeMax();//100000000000000000.f;
+		float minRange = -10000000000000.f; // message.getRangeMin();
+		float maxRange = 100000000000000000.f; // message.getRangeMax();
 		float value = Utils.averageInBounds(Utils.getArray(ranges,178,182), minRange, maxRange, -1);
 		if(!isBias2Set) {
 			bias2 = value;
