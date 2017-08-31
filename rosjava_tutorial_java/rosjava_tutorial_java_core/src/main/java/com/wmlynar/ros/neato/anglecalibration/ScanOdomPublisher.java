@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.wmlynar.ros.neato.calibration;
+package com.wmlynar.ros.neato.anglecalibration;
 
 import org.ros.concurrent.CancellableLoop;
 import org.ros.message.Time;
@@ -37,8 +37,8 @@ public class ScanOdomPublisher extends AbstractNodeMain {
 	private LaserScan scan;
 	private Odometry odom;
 	private float[] ranges;
-	private float xOdom;
-	private float xScan;
+	private float angleOdom;
+	private float angleScan;
 
 	@Override
 	public GraphName getDefaultNodeName() {
@@ -60,8 +60,8 @@ public class ScanOdomPublisher extends AbstractNodeMain {
 		ranges = new float[360];
 		scan.setRanges(ranges);
 		
-		xOdom = 252523.f;
-		xScan = 7543235.f;
+		angleOdom = 252523.f;
+		angleScan = 7543235.f;
 
 		connectedNode.executeCancellableLoop(new CancellableLoop() {
 			@Override
@@ -76,16 +76,16 @@ public class ScanOdomPublisher extends AbstractNodeMain {
 		Time time = connectedNode.getCurrentTime();
 		
 		odom.getHeader().setStamp(time);
-		odom.getPose().getPose().getPosition().setX(xOdom);
-		odom.getPose().getPose().getPosition().setY(xOdom);
+		odom.getPose().getPose().getPosition().setX(angleOdom);
+		odom.getPose().getPose().getPosition().setY(angleOdom);
 		odomPublisher.publish(odom);
 
 		scan.getHeader().setStamp(time);
-		scan.getRanges()[180] = xScan;
+		scan.getRanges()[180] = angleScan;
 		scanPublisher.publish(scan);
 		
-		xOdom += Math.random()*10-5;
-		xScan += Math.random()*20-10;
+		angleOdom += Math.random()*10-5;
+		angleScan += Math.random()*20-10;
 
 		Thread.sleep(10);
 	}

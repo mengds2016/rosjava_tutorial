@@ -1,4 +1,4 @@
-package com.wmlynar.ros.neato.calibration;
+package com.wmlynar.ros.neato.distancecalibration;
 
 import java.net.URI;
 

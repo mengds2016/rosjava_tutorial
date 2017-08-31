@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.wmlynar.ros.neato.calibration;
+package com.wmlynar.ros.neato.anglecalibration;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -65,7 +65,7 @@ public class ScanOdomSubscriberPlotter extends AbstractNodeMain {
 		RefineryUtilities.centerFrameOnScreen(plotter);
 		plotter.setVisible(true);
 		
-		plotter.setMaximumXRange(10);
+		plotter.setMaximumXRange(5);
 		
 		plotter.addKeyListener(new KeyListener() {
 			
